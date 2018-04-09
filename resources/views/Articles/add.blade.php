@@ -28,9 +28,6 @@
                 @endforeach
             </select>
         </div>
-        <span style="cursor: pointer; color: #2696f0; font-weight: bold;">Новая категория</span>
-        <br>
-        <br>
         <div class="form-group">
             <label for="InputTitle">Заголовок</label>
             <input type="text" class="form-control" id="InputTitle" name="title" required>

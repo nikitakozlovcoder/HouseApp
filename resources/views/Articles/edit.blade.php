@@ -18,41 +18,50 @@
         <button type="button" class="btn btn-primary"><a href="{{route('ShowAll')}}" style="color: white !important">Назад</a></button>
     </div>
 </div>
-<div class="wrap" style="width: 900px; margin: 60px auto 0;">
-    <form action="{{route('Update', ['id' => 1])}}" method="post" style="width: 100%;">
+<div class="wrap" style="width: 900px; margin: 60px auto 20px;">
+    <form action="{{route('Add')}}" method="post" style="width: 100%;" enctype="multipart/form-data">
         <div class="form-group">
             <label for="exampleSelect1">Категория</label>
-            <select class="form-control" id="exampleSelect1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+            <select class="form-control" id="exampleSelect1" name="category_id">
+                @foreach($categories as $category)
+                    @if($category['id'] == $cat['id'])
+                    <option value="{{$category['id']}}" selected = 'selected'>{{$category['name']}}</option>
+                    @else
+                    <option value="{{$category['id']}}">{{$category['name']}}</option>
+                    @endif
+                @endforeach
             </select>
         </div>
-        <span style="cursor: pointer; color: #2696f0; font-weight: bold;">Новая категория</span>
-        <br>
-        <br>
         <div class="form-group">
+
             <label for="InputTitle">Заголовок</label>
-            <input type="text" class="form-control" id="InputTitle" name="title">
+            <input type="text" class="form-control" id="InputTitle" name="title" required value="{{$article[0]['title']}}">
+        </div>
+        <div class="form-group">
+            <img src="{{'../img/'.$article[0]['image_url']}}" alt="" style="max-width: 200px; height: auto; max-height: 200px; display: block; padding: 20px 0;">
+            <label for="InputFile">Изображение</label>
+            <input type="file" class="form-control-file" id="InputFile" name="article_image" required>
         </div>
         <div class="form-group">
             <label for="InputShort">Краткое описание</label>
-            <textarea name="short" id="InputShort" cols="" rows="2" class="form-control"></textarea>
+            <textarea name="short" id="InputShort" cols="" rows="2" class="form-control">{{$article[0]['short']}}</textarea>
         </div>
         <div class="form-group">
             <label for="InputBody">Текст</label>
-            <textarea name="body" id="InputShort" cols="30" rows="10" class="form-control"></textarea>
+            <textarea name="body" id="InputBody" cols="30" rows="10" class="form-control" required>{{$article[0]['body']}}</textarea>
         </div>
         <div class="form-check">
             <label class="form-check-label">
-                <input type="checkbox" class="form-check-input" name="is_main">
+                @if($article[0]['is_main'])
+                    <input type="checkbox" class="form-check-input" name="is_main" checked>
+                @else
+                    <input type="checkbox" class="form-check-input" name="is_main">
+                @endif
                 На главной?
             </label>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Редактировать</button>
+        <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Добавить</button>
         {{ csrf_field() }}
     </form>
 </div>

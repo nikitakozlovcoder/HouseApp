@@ -41,7 +41,7 @@
             <tr>
 
                 <th>{{$i}}</th>
-                <th><img src="{{'./img/uploads/'.$articles[$i]['image_url']}}" alt="" style="width: 70px; height: auto; max-height: 70px;"></th>
+                <th><img src="{{'./img/'.$articles[$i]['image_url']}}" alt="" style="width: 70px; height: auto; max-height: 70px;"></th>
                 <th>{{$articles[$i]['title']}}</th>
                 <th>{{$articles[$i]->Category['name']}}</th>
                 <th>

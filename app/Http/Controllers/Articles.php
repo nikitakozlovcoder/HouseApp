@@ -23,7 +23,15 @@ class Articles extends Controller
     }
     public function Show($id)
     {
-        return view('Articles.edit');
+        $categories = Category::all();
+        $article = Article::where('id', $id);;
+
+        if ($article === null)
+        {
+            abort(404);
+        }
+        $cat = Article::find($id)->Category;
+        return view('Articles.edit', ['categories' => $categories, 'article' => $article->get(), 'cat' => $cat]);
     }
 
     public function AddShow()
@@ -34,6 +42,7 @@ class Articles extends Controller
     }
     public function Add(Request $request)
     {
+
         $article = new Article();
         $article->title = $request->input('title');
         $article->short = $request->input('short');
@@ -53,7 +62,7 @@ class Articles extends Controller
         return redirect()->route('ShowAll');
     }
 
-    public function Update()
+    public function Update(Request $request, $id)
     {
 
     }
