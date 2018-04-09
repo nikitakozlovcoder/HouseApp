@@ -20,10 +20,6 @@
         <label for="InputPassword">Пароль</label>
         <input type="password" class="form-control" id="InputPassword" placeholder="Пароль..." name="password">
     </div>
-    <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
     <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Войти</button>
     {{ csrf_field() }}
 </form>

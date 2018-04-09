@@ -31,4 +31,4 @@ Route::get('/articles', 'Articles@ShowAll')->name('ShowAll');
 Route::post('/articles/add', 'Articles@Add')->name('Add');
 Route::get('/articles/addShow', 'Articles@AddShow')->name('AddShow');
 Route::post('/articles/update/{id}', 'Articles@Update')->name('Update');
-Route::get('/articles/delete/{id}', 'Articles@Delete')->name('Delete');
+Route::post('/articles/delete/{id}', 'Articles@Delete')->name('Delete')->where('id', '[0-9]+');

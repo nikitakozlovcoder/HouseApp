@@ -29,7 +29,7 @@
 </header>
 <script src="./js/nav.js"></script>
 <section class="products-grid">
-  <div class="wrap">
+  <div class="wrap" style="max-width: 1100px;">
       <h1>Mеталлочерепица</h1>
       <div class="product-grid_items">
           <div class="product-grid_item">
@@ -73,7 +73,7 @@
 
 
 </section>
-         <footer class="footer" style="background-image: url('./img/1920x1080/02.jpg')">
+         <footer class="footer" style="background-image: url('{{asset("/img/1920x1080/02.jpg")}}')">
             <div class="wrap">
             <div class="footer_cols">
                 <div class="footer_col footer_col_info">

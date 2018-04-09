@@ -11,14 +11,15 @@
         table th{
             vertical-align: middle !important;
         }
+        .a-hover:hover{
+            text-decoration: underline !important;
+        }
     </style>
 </head>
 <body>
 <div style="position: fixed; width: 100%; background-color: white; top: 0; border-bottom: 1px solid #dbdbdb;">
     <div style="display: flex; justify-content: space-between; width: 900px; margin: 10px auto;">
-        <form action="{{route('LogOut')}}">
-            <button type="button" class="btn btn-secondary">Выйти</button>
-        </form>
+        <button type="button" class="btn btn-secondary"><a href="{{route('LogOut')}}" style="color: white !important">Выйти</a></button>
         <button type="button" class="btn btn-primary"><a href="{{route('AddShow')}}" style="color: white !important">Добавить</a></button>
     </div>
 </div>
@@ -54,7 +55,13 @@
                 <th style="font-size: 12px;">
                     <a href="{{route('Show', ['id'=> $articles[$i]['id']])}}">Читать </a>
                     <a href="{{route('UpdateShow', ['id'=> $articles[$i]['id']])}}">Изменить </a>
-                    <a href="{{route('Delete', ['id'=> $articles[$i]['id']])}}" style="color: red;">Удалить</a></th>
+                    <form action="{{route('Delete', ['id'=> $articles[$i]['id']])}}" method="post">
+                        <button style="border: 0; background-color: white; padding: 0;">
+                            <a style="color: red; cursor: pointer;" class="a-hover">Удалить</a>
+                        </button>
+                        {{csrf_field()}}
+                    </form>
+                    </th>
             </tr>
         @endfor
         </tbody>

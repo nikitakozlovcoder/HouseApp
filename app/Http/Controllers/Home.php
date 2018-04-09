@@ -9,6 +9,8 @@
 namespace App\Http\Controllers;
 
 
+use App\Article;
+
 class Home
 {
     public function Index()
@@ -21,6 +23,7 @@ class Home
     }
     public function Product($id)
     {
-        return $id;
+        $article = Article::find($id);
+        return view('product', ['article'=>$article]);
     }
 }

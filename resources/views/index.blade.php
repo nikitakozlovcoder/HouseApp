@@ -37,11 +37,11 @@
             <script src="./js/nav.js"></script>
             <div class="wrap header_info-wrap">
                 <div class="header_info text">
-                    <h1 class="header_info_title">hi tech design</h1>
+                    <h1 class="header_info_title">дом кровли</h1>
                     <div class="header_info_text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci est exercitationem impedit, recusandae repudiandae tenetur!
+                        Официальный дилер компании <img src="{{asset('./img/Showcase.png')}}" alt="" style="max-width: 100px;">.
                     </div>
-                    <a href="#" class="header_info_button">
+                    <a href="{{route('Products')}}" class="header_info_button">
                         Узнать больше
                     </a>
                 </div>
@@ -161,7 +161,7 @@
                 </div>
             </div>
         </section>
-        <footer class="footer" >
+        <footer class="footer" style="background-image: url('{{asset("/img/1920x1080/02.jpg")}}')" >
             <div class="wrap">
             <div class="footer_cols">
                 <div class="footer_col footer_col_info">

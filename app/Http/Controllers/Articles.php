@@ -7,6 +7,7 @@ use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Storage;
 
 class Articles extends Controller
 {
@@ -64,10 +65,48 @@ class Articles extends Controller
 
     public function Update(Request $request, $id)
     {
+        $article = Article::find($id);
 
+        if ($article !== null)
+        {
+            $article->title = $request->input('title');
+            $article->short = $request->input('short');
+            $article->body = $request->input('body');
+            $article->category_id = $request->input('category_id');
+            if ($request->file('article_image') !== null)
+            {
+                $path = $article['image_url'];
+                Storage::delete($path);
+                $newPath = $request->file('article_image')->store('uploads');
+                $article->image_url = $newPath;
+            }
+
+            if ($request->input('is_main'))
+            {
+                $article->is_main = true;
+            }
+            else
+            {
+                $article->is_main = false;
+            }
+           $article->save();
+           return redirect()->route('ShowAll');
+        }
+
+        abort(404);
     }
-    public function Delete()
+    public function Delete($id)
     {
+        $article = Article::find($id);
+        if ($article !== null)
+        {
+            $path = $article['image_url'];
+            $article->delete();
+            Storage::delete($path);
+            return redirect()->route('ShowAll');
+        }
+
+        abort(404);
 
     }
 }

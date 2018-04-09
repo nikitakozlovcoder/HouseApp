@@ -12,14 +12,12 @@
 <body>
 <div style=" position: fixed; width: 100%; background-color: white; top: 0; border-bottom: 1px solid #dbdbdb;">
     <div style="display: flex; justify-content: space-between; width: 900px; margin: 10px auto;">
-        <form action="{{route('LogOut')}}">
-            <button type="button" class="btn btn-secondary">Выйти</button>
-        </form>
+        <button type="button" class="btn btn-secondary"><a href="{{route('LogOut')}}" style="color: white !important">Выйти</a></button>
         <button type="button" class="btn btn-primary"><a href="{{route('ShowAll')}}" style="color: white !important">Назад</a></button>
     </div>
 </div>
 <div class="wrap" style="width: 900px; margin: 60px auto 20px;">
-    <form action="{{route('Add')}}" method="post" style="width: 100%;" enctype="multipart/form-data">
+    <form action="{{route('Update', ['id' => $article[0]['id']])}}" method="post" style="width: 100%;" enctype="multipart/form-data">
         <div class="form-group">
             <label for="exampleSelect1">Категория</label>
             <select class="form-control" id="exampleSelect1" name="category_id">
@@ -40,7 +38,7 @@
         <div class="form-group">
             <img src="{{'../img/'.$article[0]['image_url']}}" alt="" style="max-width: 200px; height: auto; max-height: 200px; display: block; padding: 20px 0;">
             <label for="InputFile">Изображение</label>
-            <input type="file" class="form-control-file" id="InputFile" name="article_image" required>
+            <input type="file" class="form-control-file" id="InputFile" name="article_image">
         </div>
         <div class="form-group">
             <label for="InputShort">Краткое описание</label>
