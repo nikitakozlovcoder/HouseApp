@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  class="no-js" lang="">
+<html  class="no-js" lang="ru">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -28,7 +28,7 @@
     </nav>
 </header>
 <script src='{{asset("js/nav.js")}}'></script>
-    <div class="wrap scope" style="margin-top: 100px;">
+    <div class="wrap scope" style="margin-top: 100px; max-width: 1000px;">
         <h1>{{$article['title']}}</h1>
         <br>
         <img src="{{'../img/'.$article['image_url']}}" alt="" class="product_scope_img">

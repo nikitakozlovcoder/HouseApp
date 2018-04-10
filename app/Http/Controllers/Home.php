@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 
 use App\Article;
+use App\Category;
 
 class Home
 {
@@ -19,7 +20,8 @@ class Home
     }
     public function Products()
     {
-        return view('products');
+        $categories = Category::all();
+        return view('products', ['categories' => $categories]);
     }
     public function Product($id)
     {

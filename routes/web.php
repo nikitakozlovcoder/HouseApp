@@ -32,3 +32,11 @@ Route::post('/articles/add', 'Articles@Add')->name('Add');
 Route::get('/articles/addShow', 'Articles@AddShow')->name('AddShow');
 Route::post('/articles/update/{id}', 'Articles@Update')->name('Update');
 Route::post('/articles/delete/{id}', 'Articles@Delete')->name('Delete')->where('id', '[0-9]+');
+
+Route::get('/categories', 'Categories@ShowAll')->name('ShowCategories');
+Route::post('/categories/add', 'Categories@Add')->name('AddCategories');
+Route::post('/categories/update/{id}', 'Categories@Update')->name('UpdateCategories')->where('id', '[0-9]+');
+Route::post('/categories/delete/{id}', 'Categories@Delete')->name('DeleteCategories')->where('id', '[0-9]+');
+
+
+

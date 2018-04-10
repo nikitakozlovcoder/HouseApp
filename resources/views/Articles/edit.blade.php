@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -17,6 +17,7 @@
     </div>
 </div>
 <div class="wrap" style="width: 900px; margin: 60px auto 20px;">
+    <h1>Редактировать статью</h1>
     <form action="{{route('Update', ['id' => $article[0]['id']])}}" method="post" style="width: 100%;" enctype="multipart/form-data">
         <div class="form-group">
             <label for="exampleSelect1">Категория</label>
@@ -36,9 +37,9 @@
             <input type="text" class="form-control" id="InputTitle" name="title" required value="{{$article[0]['title']}}">
         </div>
         <div class="form-group">
-            <img src="{{'../img/'.$article[0]['image_url']}}" alt="" style="max-width: 200px; height: auto; max-height: 200px; display: block; padding: 20px 0;">
+            <img src="{{'../img/'.$article[0]['image_url']}}" alt="" style="max-width: 200px; height: auto; max-height: 200px; display: block; padding: 20px 0;" class="preview">
             <label for="InputFile">Изображение</label>
-            <input type="file" class="form-control-file" id="InputFile" name="article_image">
+            <input type="file" class="form-control-file" id="InputFile" accept="image/*" name="article_image" required onchange="loadFile(event)">
         </div>
         <div class="form-group">
             <label for="InputShort">Краткое описание</label>
@@ -62,6 +63,12 @@
         <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Добавить</button>
         {{ csrf_field() }}
     </form>
+
+    <script>
+        var loadFile = function(event) {
+            document.getElementsByClassName('preview')[0].src = URL.createObjectURL(event.target.files[0]);
+        };
+    </script>
 </div>
 </body>
 </html>

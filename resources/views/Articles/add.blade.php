@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -17,6 +17,7 @@
     </div>
 </div>
 <div class="wrap" style="width: 900px; margin: 60px auto 20px;">
+    <h1>Новая статья</h1>
     <form action="{{route('Add')}}" method="post" style="width: 100%;" enctype="multipart/form-data">
         <div class="form-group">
             <label for="exampleSelect1">Категория</label>
@@ -30,9 +31,11 @@
             <label for="InputTitle">Заголовок</label>
             <input type="text" class="form-control" id="InputTitle" name="title" required>
         </div>
+
         <div class="form-group">
             <label for="InputFile">Изображение</label>
-            <input type="file" class="form-control-file" id="InputFile" name="article_image" required>
+            <img src="" alt="" class="preview" style="max-width: 200px; height: auto; max-height: 200px; display: block; padding: 20px 0;">
+            <input type="file" class="form-control-file file" id="InputFile" accept="image/*" name="article_image" required onchange="loadFile(event)">
         </div>
         <div class="form-group">
             <label for="InputShort">Краткое описание</label>
@@ -52,6 +55,11 @@
         <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Добавить</button>
         {{ csrf_field() }}
     </form>
+    <script>
+      var loadFile = function(event) {
+          document.getElementsByClassName('preview')[0].src = URL.createObjectURL(event.target.files[0]);
+      };
+    </script>
 </div>
 </body>
 </html>

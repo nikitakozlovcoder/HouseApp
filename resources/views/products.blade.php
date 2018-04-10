@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  class="no-js" lang="">
+<html  class="no-js" lang="ru">
 <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -30,45 +30,22 @@
 <script src="./js/nav.js"></script>
 <section class="products-grid">
   <div class="wrap" style="max-width: 1100px;">
-      <h1>Mеталлочерепица</h1>
-      <div class="product-grid_items">
-          <div class="product-grid_item">
-              <div class="product-grid_item_wrap">
-                   <img src="http://placeimg.com/640/480/any" alt="">
+      @foreach($categories as $category)
+          <h1>{{$category['name']}}</h1>
+          <div class="product-grid_items">
+
+            @foreach($category->Articles as $article)
+              <div class="product-grid_item">
+                  <div class="product-grid_item_wrap">
+                      <img src="{{'./img/'.$article['image_url']}}" alt="">
+                  </div>
+                  <a href="{{route('Show', ['id'=> $article['id']])}}" class="product-grid_item_title">{{$article['title']}}</a>
               </div>
-            <a href="#" class="product-grid_item_title">Полиэстер</a>
+
+            @endforeach
           </div>
-          <div class="product-grid_item">
-              <div class="product-grid_item_wrap">
-                  <img src="http://placeimg.com/630/880/any" alt="">
-              </div>
-             <a href="#" class="product-grid_item_title">PURETAN</a>
-          </div>
-          <div href="#" class="product-grid_item">
-              <div class="product-grid_item_wrap">
-                  <img src="http://placeimg.com/645/480/any" alt="">
-              </div>
-             <a href="#" class="product-grid_item_title">PUR50</a>
-          </div>
-          <div href="#" class="product-grid_item">
-              <div class="product-grid_item_wrap">
-                  <img src="http://placeimg.com/650/480/any" alt="">
-              </div>
-             <a href="#" class="product-grid_item_title">ECOSTEEL</a>
-          </div>
-          <div class="product-grid_item">
-              <div class="product-grid_item_wrap">
-                  <img src="http://placeimg.com/621/480/any" alt="">
-              </div>
-             <a href="#" class="product-grid_item_title">Cloudy</a>
-          </div>
-          <div class="product-grid_item">
-              <div class="product-grid_item_wrap">
-                  <img src="http://placeimg.com/620/480/any" alt="">
-              </div>
-             <a href="#" class="product-grid_item_title">Agnetta</a>
-          </div>
-     </div>
+      @endforeach
+
   </div>
 
 

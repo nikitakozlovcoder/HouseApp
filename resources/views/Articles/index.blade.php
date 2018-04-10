@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -24,7 +24,8 @@
     </div>
 </div>
 <div class="wrap" style="width: 900px; margin: 0 auto;">
-    <table class="table" style="margin-top: 80px">
+    <a href="{{route('ShowCategories')}}" style="margin-top: 70px; display: block;">+Категории</a>
+    <table class="table" style="margin-top: 10px">
         <thead>
         <tr>
             <th scope="col">#</th>
