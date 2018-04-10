@@ -1,22 +1,18 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: User
- * Date: 09.04.2018
- * Time: 14:06
- */
 
 namespace App\Http\Controllers;
 
 
 use App\Article;
 use App\Category;
+use App\Image;
 
 class Home
 {
     public function Index()
     {
-        return view('index');
+        $images = Image::all();
+        return view('index', ['images' => $images]);
     }
     public function Products()
     {

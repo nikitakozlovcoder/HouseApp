@@ -124,36 +124,11 @@
                 <div class="text">Ознакомьтесь с нашими работами.</div>
                 <div class="showcase_overflow">
                     <div class="showcase_grid">
+                        @foreach($images as $image)
                         <div class="showcase_grid_item">
-                            <img src="./img/1100x800/01.jpg" alt="">
+                            <img src="{{'./img/'.$image['image_url']}}" alt="">
                         </div>
-                         <div class="showcase_grid_item">
-                            <img src="./img/1100x800/02.jpg" alt="">
-                        </div>
-                         <div class="showcase_grid_item">
-                            <img src="./img/1100x800/03.jpg" alt="">
-                        </div>
-                         <div class="showcase_grid_item">
-                            <img src="./img/1100x800/04.jpg" alt="">
-                        </div>
-                         <div class="showcase_grid_item">
-                            <img src="./img/1100x800/05.jpg" alt="">
-                        </div>
-                         <div class="showcase_grid_item">
-                            <img src="./img/1100x800/06.jpg" alt="">
-                        </div>
-                         <div class="showcase_grid_item">
-                            <img src="./img/1100x800/07.jpg" alt="">
-                        </div>
-                         <div class="showcase_grid_item">
-                            <img src="./img/1100x800/08.jpg" alt="">
-                        </div>
-                         <div class="showcase_grid_item">
-                            <img src="./img/1100x800/09.jpg" alt="">
-                        </div>
-                         <div class="showcase_grid_item">
-                            <img src="./img/1100x800/10.jpg" alt="">
-                        </div>
+                    @endforeach
                     </div>
                     <div class="showcase_grid_expand">
                             Показать все...

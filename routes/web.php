@@ -37,6 +37,10 @@ Route::get('/categories', 'Categories@ShowAll')->name('ShowCategories');
 Route::post('/categories/add', 'Categories@Add')->name('AddCategories');
 Route::post('/categories/update/{id}', 'Categories@Update')->name('UpdateCategories')->where('id', '[0-9]+');
 Route::post('/categories/delete/{id}', 'Categories@Delete')->name('DeleteCategories')->where('id', '[0-9]+');
+Route::post('/gallery/delete/{id}', 'Gallery@Delete')->name('DeleteGallery')->where('id', '[0-9]+');
+Route::post('/gallery/add', 'Gallery@Add')->name('AddGallery')->where('id', '[0-9]+');
+Route::get('/gallery', 'Gallery@ShowAll')->name('ShowGallery');
+
 
 
 
