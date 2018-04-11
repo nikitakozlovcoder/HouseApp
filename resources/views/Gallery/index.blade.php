@@ -21,8 +21,8 @@
 <body>
 <div style=" position: fixed; width: 100%; background-color: white; top: 0; border-bottom: 1px solid #dbdbdb;">
     <div style="display: flex; justify-content: space-between; width: 900px; margin: 10px auto;">
-        <button type="button" class="btn btn-secondary"><a href="{{route('LogOut')}}" style="color: white !important">Выйти</a></button>
-        <button type="button" class="btn btn-primary"><a href="{{route('ShowAll')}}" style="color: white !important">Назад</a></button>
+        <a href="{{route('LogOut')}}" style="color: white !important"><button type="button" class="btn btn-secondary">Выйти</button></a>
+        <a href="{{route('ShowAll')}}" style="color: white !important"><button type="button" class="btn btn-primary">Назад</button></a>
     </div>
 </div>
 <div class="wrap" style="width: 900px; margin: 80px auto 20px;">

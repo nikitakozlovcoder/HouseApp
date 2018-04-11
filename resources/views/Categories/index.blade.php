@@ -5,15 +5,15 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Админ</title>
 
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
 </head>
 <body>
 <div style=" position: fixed; width: 100%; background-color: white; top: 0; border-bottom: 1px solid #dbdbdb;">
     <div style="display: flex; justify-content: space-between; width: 900px; margin: 10px auto;">
-        <button type="button" class="btn btn-secondary"><a href="{{route('LogOut')}}" style="color: white !important">Выйти</a></button>
-        <button type="button" class="btn btn-primary"><a href="{{route('ShowAll')}}" style="color: white !important">Назад</a></button>
+        <a href="{{route('LogOut')}}" style="color: white !important"> <button type="button" class="btn btn-secondary">Выйти</button></a>
+        <a href="{{route('ShowAll')}}" style="color: white !important"><button type="button" class="btn btn-primary">Назад</button></a>
     </div>
 </div>
 <div class="wrap" style="width: 900px; margin: 80px auto 20px;">

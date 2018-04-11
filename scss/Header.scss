@@ -16,6 +16,10 @@
 
 .nav_expand{
     cursor: pointer;
+    height: 15px;
+}
+.nav_expand path{
+    fill: white;
 }
 a {
   font-family: Hind, sans-serif;
@@ -110,4 +114,8 @@ header  a:focus, header a:hover, header a:active, .header_links-active {
 }
 .nav_light .header_link{
     color: black;
+}
+
+.nav_light .nav_expand path{
+    fill: black;
 }

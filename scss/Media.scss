@@ -16,6 +16,19 @@
 
 @media screen and (min-width: 500px ){
 
+    .map{
+        width: 300px;
+        height: 300px;
+    }
+    .footer_col_info{
+        display: flex;
+        align-items: center;
+    }
+    .footer_col_info>*{
+
+        padding: 5px;
+    }
+
     .products_columns{
         display: flex;
         flex-wrap: wrap;
@@ -121,6 +134,14 @@
     }
     .showcase_grid_item:hover{
         transform: scale(1.4);
+    }
+    .footer_col_info{
+        display: block;
+
+    }
+    .map{
+        width: 450px;
+        height: 325px;
     }
 }
 @media screen and (min-width: 1100px ) {
