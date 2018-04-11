@@ -80,24 +80,16 @@
                 <h1>Наша продукция</h1>
                 <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dicta est eveniet ipsam possimus quasi quibusdam, quos recusandae sed tenetur ullam.</div>
                 <div class="products_columns">
+                    @foreach($articles as $article)
+
                     <div class="products_item">
-                        <img src="./img/970x647/01.jpg" alt="">
-                        <h3>Best Title</h3>
-                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda dignissimos ea eos facilis illum, laborum molestias necessitatibus recusandae voluptas?</div>
-                        <a class="products_item_button" href="#">Читать дальше</a>
+                        <img src="{{'./img/'.$article->image_url}}" alt="">
+                        <h3> {{$article->title}}</h3>
+                        <div>{{$article->short}}</div>
+                        <a class="products_item_button" href="{{route('Show', ['id'=> $article->id])}}">Читать дальше</a>
                     </div>
-                     <div class="products_item">
-                        <img src="./img/970x647/02.jpg" alt="">
-                         <h3>Beautiful Text</h3>
-                         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda dignissimos ea eos facilis illum, laborum molestias necessitatibus recusandae voluptas? Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dignissimos ducimus eligendi eveniet nihil quae?</div>
-                        <a class="products_item_button" href="#">Читать дальше</a>
-                    </div>
-                     <div class="products_item">
-                        <img src="./img/970x647/03.jpg" alt="">
-                         <h3>Just a regular Text</h3>
-                         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda dignissimos ea eos facilis illum, laborum molestias necessitatibus recusandae voluptas?</div>
-                         <a class="products_item_button" href="#">Читать дальше</a>
-                    </div>
+                    @endforeach
+
                 </div>
             </div>
         </div>

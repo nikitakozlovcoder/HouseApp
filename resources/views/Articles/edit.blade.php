@@ -8,9 +8,18 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <script src='{{asset('js/tinymce/tinymce.min.js')}}'></script>
+    <script>
+        tinymce.init({
+            selector: '#InputBody',
+            plugins : 'advlist autolink link image lists charmap print',
+            images_upload_url: '/articles/uploadimage',
+            automatic_uploads: false
+        });
+    </script>
 </head>
 <body>
-<div style=" position: fixed; width: 100%; background-color: white; top: 0; border-bottom: 1px solid #dbdbdb;">
+<div style=" position: fixed; width: 100%; background-color: white; top: 0; border-bottom: 1px solid #dbdbdb; z-index: 100;">
     <div style="display: flex; justify-content: space-between; width: 900px; margin: 10px auto;">
         <button type="button" class="btn btn-secondary"><a href="{{route('LogOut')}}" style="color: white !important">Выйти</a></button>
         <button type="button" class="btn btn-primary"><a href="{{route('ShowAll')}}" style="color: white !important">Назад</a></button>
@@ -47,7 +56,7 @@
         </div>
         <div class="form-group">
             <label for="InputBody">Текст</label>
-            <textarea name="body" id="InputBody" cols="30" rows="10" class="form-control" required>{{$article[0]['body']}}</textarea>
+            <textarea name="body" id="InputBody" rows="18">{!!$article[0]['body'] !!}</textarea>
         </div>
         <div class="form-check">
             <label class="form-check-label">

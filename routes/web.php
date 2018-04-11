@@ -40,9 +40,6 @@ Route::post('/categories/delete/{id}', 'Categories@Delete')->name('DeleteCategor
 Route::post('/gallery/delete/{id}', 'Gallery@Delete')->name('DeleteGallery')->where('id', '[0-9]+');
 Route::post('/gallery/add', 'Gallery@Add')->name('AddGallery')->where('id', '[0-9]+');
 Route::get('/gallery', 'Gallery@ShowAll')->name('ShowGallery');
-
-Route::post('/articles/testImage', 'Articles@TestImage')->name('ArticleTestImage');
-
 Route::post('/articles/uploadimage', 'Articles@UploadImage')->name('ArticleUploadImage');
 
 

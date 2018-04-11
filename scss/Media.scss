@@ -19,10 +19,10 @@
     .products_columns{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
     }
     .products_item{
         flex-basis: 40%;
+        padding: 10px;
     }
     .products_item:first-child{
         flex-basis: 100%;

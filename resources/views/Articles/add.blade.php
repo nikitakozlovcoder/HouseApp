@@ -10,46 +10,12 @@
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src='{{asset('js/tinymce/tinymce.min.js')}}'></script>
-    <script src='{{asset('js/jq.min.js')}}'></script>
     <script>
         tinymce.init({
             selector: '#InputBody',
             plugins : 'advlist autolink link image lists charmap print',
             images_upload_url: '/articles/uploadimage',
             automatic_uploads: false
-           // images_upload_url: '/articles/uploadimage',
-//            automatic_uploads: false,
-//            images_upload_handler: function (blobInfo, success, failure) {
-//                var xhr, formData;
-//
-//                xhr = new XMLHttpRequest();
-//                xhr.withCredentials = false;
-//                xhr.open('POST', '/articles/uploadimage');
-//                xhr.setRequestHeader('X-CSRF-TOKEN',  $('meta[name="csrf-token"]').attr('content'));
-//
-//                xhr.onload = function() {
-//                    var json;
-//
-//                    if (xhr.status != 200) {
-//                        failure('HTTP Error: ' + xhr.status);
-//                        return;
-//                    }
-//
-//                    json = JSON.parse(xhr.responseText);
-//
-//                    if (!json || typeof json.location != 'string') {
-//                        failure('Invalid JSON: ' + xhr.responseText);
-//                        return;
-//                    }
-//
-//                    success(json.location);
-//                };
-//
-//                formData = new FormData();
-//                formData.append('file', blobInfo.blob(), blobInfo.filename());
-//
-//                xhr.send(formData);
-//            }
         });
     </script>
 </head>
@@ -89,8 +55,6 @@
         <div class="form-group">
             <label for="InputBody">Текст</label>
             <textarea name="body" id="InputBody" rows="18"></textarea>
-
-
         </div>
         <div class="form-check">
             <label class="form-check-label">

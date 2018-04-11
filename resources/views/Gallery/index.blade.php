@@ -47,7 +47,7 @@
                 <img src="{{'./img/'.$image['image_url']}}" alt="" class="image">
             </div>
             <form action="{{route('DeleteGallery', ['id'=> $image['id']])}}"  method="post">
-                <button type="submit" class="btn btn-danger">Удалить</button>
+                <button type="submit" class="btn btn-danger" style="margin-top: 2px; margin-bottom: 10px;">Удалить</button>
                 {{csrf_field()}}
             </form>
         </div>
