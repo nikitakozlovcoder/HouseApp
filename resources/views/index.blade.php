@@ -49,26 +49,32 @@
         </header>
         <section class="features_bg">
             <div class="wrap">
+                <h1>Наш магазин предлагает:</h1>
                 <div class="features">
+
                     <div class="features_item">
-                        <h3>Art Of Coding</h3>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quam?
+                        <h3>Полную комплектацию кровельных систем</h3>
+                        В нашем магазине вы можете приобрести все, что необходимо для создания надежной и красивой крыши.
                     </div>
                     <div class="features_item">
-                        <h3>Art Of Coding</h3>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quam?
+                        <h3>Высокое качество поставляемых материалов</h3>
+                        Мы сотрудничаем только с проверенными временем поставщиками кровельных материалов.
                     </div>
                     <div class="features_item">
-                        <h3>Art Of Coding</h3>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quam?
+                        <h3>Гарантию лучшей цены</h3>
+                        Гибкая система скидок и индивидуальный подход к каждому клиенту гарантирует наилучшую цену.
                     </div>
                     <div class="features_item">
-                        <h3>Art Of Coding</h3>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quam?
+                        <h3>Широкий ассортимент складских позиций.</h3>
+                        В наличии поддерживается большое количество материалов, необходимых для начала монтажа кровли.
                     </div>
                     <div class="features_item">
-                        <h3>Art Of Coding</h3>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quam?
+                        <h3>Выезд специалиста</h3>
+                        Бесплатный выезд специалиста на объект для замера и расчета кровли и всех комплектующих.
+                    </div>
+                    <div class="features_item">
+                        <h3>Работы  любой сложности</h3>
+                        Монтаж кровель любой сложности квалифицированными мастерами.
                     </div>
 
                 </div>
