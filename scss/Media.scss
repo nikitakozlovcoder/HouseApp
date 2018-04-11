@@ -135,14 +135,7 @@
     .showcase_grid_item:hover{
         transform: scale(1.4);
     }
-    .footer_col_info{
-        display: block;
 
-    }
-    .map{
-        width: 450px;
-        height: 325px;
-    }
 }
 @media screen and (min-width: 1100px ) {
      .product-grid_item{
@@ -156,6 +149,14 @@
     }
     .footer_col{
         flex-basis: 49%;
+    }
+    .footer_col_info{
+        display: block;
+
+    }
+    .map{
+        width: 450px;
+        height: 325px;
     }
 }
 
