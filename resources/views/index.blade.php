@@ -30,7 +30,7 @@
                             <a href="{{route('Products')}}" class="header_link">Каталог</a>
                             <a href="#" class="header_link">Контакты</a>
                         </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="nav_expand"><path d="M0 84V44c0-8.837 7.163-16 16-16h416c8.837 0 16 7.163 16 16v40c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16zm16 144h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 256h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0-128h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  class="nav_expand"><path style="fill: black !important;" d="M0 84V44c0-8.837 7.163-16 16-16h416c8.837 0 16 7.163 16 16v40c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16zm16 144h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 256h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0-128h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
 
                      </div>
                 </nav>
@@ -49,7 +49,7 @@
         </header>
         <section class="features_bg">
             <div class="wrap">
-                <h1>Наш магазин предлагает:</h1>
+                <h1 class="features_title">Наш магазин предлагает:</h1>
                 <div class="features">
 
                     <div class="features_item">
@@ -105,7 +105,7 @@
                 <div class="info_cols">
                     <div class="info_col_text info_col">
                         <h1>О нас</h1>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi deleniti earum eligendi harum ipsam quas rem rerum temporibus ut? Culpa odit repudiandae sapiente. Ab alias, consequatur cum, cupiditate distinctio itaque natus possimus quasi quod reiciendis temporibus vero voluptas, voluptatum.
+                        Магазин «Дом кровли» специализируется на кровельных и фасадных материалах. Мы представляем все достойные внимания материалы имеющиеся на Российском рынке. Мы не работаем с неизвестными кустарными производителями. Мы выберем с вами оптимальный вариант и сможем объяснить, в чем разница материалов при внешнем сходстве.
                     </div>
 
                     <div class="info_col_img info_col">
