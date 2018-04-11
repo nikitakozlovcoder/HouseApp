@@ -39,7 +39,7 @@
         <div class="form-group">
             <img src="{{'../img/'.$article[0]['image_url']}}" alt="" style="max-width: 200px; height: auto; max-height: 200px; display: block; padding: 20px 0;" class="preview">
             <label for="InputFile">Изображение</label>
-            <input type="file" class="form-control-file" id="InputFile" accept="image/*" name="article_image" required onchange="loadFile(event)">
+            <input type="file" class="form-control-file" id="InputFile" accept="image/*" name="article_image"  onchange="loadFile(event)">
         </div>
         <div class="form-group">
             <label for="InputShort">Краткое описание</label>

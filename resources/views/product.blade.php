@@ -35,7 +35,7 @@
         <br>
         <br>
         <div class="scope_text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dicta esse facere impedit in pariatur, voluptatum. Aliquid consequuntur dignissimos error facere fugiat nisi quaerat repellendus sit ut voluptas? A, eveniet.
+        {!! $article['body']  !!}
         </div>
 
 

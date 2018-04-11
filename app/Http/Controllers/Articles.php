@@ -13,7 +13,7 @@ class Articles extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+       $this->middleware('auth');
 
     }
 
@@ -94,6 +94,14 @@ class Articles extends Controller
         }
 
         abort(404);
+    }
+    public function UploadImage(Request $request)
+    {
+        $path = $request->file('file')->store('uploads');
+
+        return response()->json([
+            'location' => 'http://'.$_SERVER['SERVER_NAME'].'/img/'.$path,
+        ]);
     }
     public function Delete($id)
     {
