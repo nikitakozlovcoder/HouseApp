@@ -16,6 +16,7 @@ class Mails extends Controller
 //            'X-Mailer: PHP/' . phpversion();
 //
 //        mail($to, $subject, $message, $headers);
+
         $name = $request->input('name');
         $mail = $request->input('email');
         $phone = $request->input('phone');
@@ -31,5 +32,6 @@ class Mails extends Controller
 
             $message->to('nikiton2606@mail.ru');
         });
-    }
+
+   }
 }

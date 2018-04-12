@@ -63,7 +63,7 @@
                     <input type="text" placeholder="Имя" name="name" required id="name">
                     <input type="email" placeholder="Почта" name="email" id="email">
                     <input type="text" placeholder="Телефон" name="phone" required id="phone">
-                    <textarea name="body" id="" rows="7" id="body"></textarea>
+                    <textarea name="body" rows="7" id="body"></textarea>
                     <input type="submit" class="footer_submit">
                     {{csrf_field()}}
                 </form>
