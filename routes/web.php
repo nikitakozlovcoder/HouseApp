@@ -43,6 +43,7 @@ Route::get('/gallery', 'Gallery@ShowAll')->name('ShowGallery');
 Route::post('/articles/uploadimage', 'Articles@UploadImage')->name('ArticleUploadImage');
 Route::get('/field', 'Fields@Index')->name('Field');
 Route::post('/field/update', 'Fields@Update')->name('FieldUpdate');
+Route::post('/mail', 'Mails@Send')->name('Mail');
 
 
 

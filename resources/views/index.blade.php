@@ -162,13 +162,14 @@
                 </div>
                 <div class="footer_col footer_col_form">
                     <h1>Свяжитесь с нами</h1>
-                     <form action="#" class="footer_form">
+                     <form action="{{route('Mail')}}" class="footer_form" method="post">
 
-                        <input type="text" placeholder="Имя">
-                        <input type="email" placeholder="Почта">
-                        <input type="text" placeholder="Телефон">
-                        <textarea name="" id="" rows="7"></textarea>
+                        <input type="text" placeholder="Имя" name="name" required id="name">
+                        <input type="email" placeholder="Почта" name="email" id="email">
+                        <input type="text" placeholder="Телефон" name="phone" required id="phone">
+                        <textarea name="body" id="" rows="7" id="body"></textarea>
                         <input type="submit" class="footer_submit">
+                         {{csrf_field()}}
                     </form>
                 </div>
             </div>

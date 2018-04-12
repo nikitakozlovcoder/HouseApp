@@ -11,7 +11,7 @@
 </head>
 
 <body style="display:flex; justify-content: center; align-items: center; min-height: 100vh;">
-<form action="{{route('LoginPost')}}" method="post" style="width: 300px;">
+<form action="{{route('LoginPost')}}" method="post" style="width: 300px;" id="contact">
     <div class="form-group">
         <label for="InputName">Логин</label>
         <input type="text" class="form-control" id="InputName"  placeholder="Введите логин..." name="login">
