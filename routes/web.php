@@ -41,6 +41,8 @@ Route::post('/gallery/delete/{id}', 'Gallery@Delete')->name('DeleteGallery')->wh
 Route::post('/gallery/add', 'Gallery@Add')->name('AddGallery')->where('id', '[0-9]+');
 Route::get('/gallery', 'Gallery@ShowAll')->name('ShowGallery');
 Route::post('/articles/uploadimage', 'Articles@UploadImage')->name('ArticleUploadImage');
+Route::get('/field', 'Fields@Index')->name('Field');
+Route::post('/field/update', 'Fields@Update')->name('FieldUpdate');
 
 
 

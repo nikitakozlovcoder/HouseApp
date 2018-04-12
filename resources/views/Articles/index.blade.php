@@ -26,6 +26,7 @@
 <div class="wrap" style="width: 900px; margin: 0 auto;">
     <a href="{{route('ShowCategories')}}" style="margin-top: 70px; display: block;">+Категории</a>
     <a href="{{route('ShowGallery')}}" style="display: block;">+Галерея</a>
+    <a href="{{route('Field')}}" style="display: block;">+Статус</a>
     <table class="table" style="margin-top: 10px">
         <thead>
         <tr>
